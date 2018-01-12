@@ -1,0 +1,139 @@
+@import "./mixins.scss";
+
+#footer {
+	display: flex;
+	position: fixed;
+	padding: {
+		left: 50px;
+		right: 50px;
+		top: 20px;
+	}
+	right: 0;
+	left: 0;
+	bottom: 0;
+	height: 24vh;
+	@include linback(to right, #191919, #000);
+	padding-top: -5px;
+	.active {
+		border-bottom: solid 1.5px green;
+		font-weight: 700;
+	}
+	.desactive {
+		font-weight: 200;
+	}
+	.in-titles {
+		font: {
+			family: "Source Sans Pro Light", "Source Sans Pro", sans-serif;
+			size: 1.2em;
+		}
+		letter-spacing: 1px;
+		padding-bottom: 1vh;
+		cursor: pointer;
+		&:not(:first-child) {
+			margin: {
+				left: 6.5em;
+			}
+		}
+	}
+	.titlesline {		
+		padding-bottom: 1vh;
+		margin-bottom: 3vh;
+		border-bottom: solid 1px #222;
+		weight: 90vw;
+		min-width: 90vw;
+		max-width: 90vw;
+		img {
+			height: 1.5em;
+			float: right;
+			right: 0;
+		}
+	}
+	.sinopse-title {
+			font-family: "Source Sans Pro Light", "Source Sans Pro", sans-serif;
+			font-weight: 100;
+			&:after {
+				content: "";
+				clear: both;
+			}
+		}
+	.sinopse-texto {
+		font:{
+			family: "Roboto", sans-serif;
+			weight: 200;
+			size: 0.9em;
+		}
+		word-wrap: break-all;
+
+	}
+}
+
+#info-icons {
+	.icons-items {
+		color: #444;
+		padding: {			
+			right: 4vw;
+		}		
+		float: left;
+		text-align: center;
+		display: inline-block;
+		.fa {
+			@include thinfont(1.5px, #0a0a0a);
+			padding: {
+				top: 1vh;
+				bottom: 0.5vh;
+			}
+			vertical-align: middle;
+			font-size: 2.5em;
+			&-dot-circle-o {
+				@include thinfont(3.7px, #131313);
+			}
+		}
+		.icons-label {
+			display: block;
+			font: {
+				size: 0.7em;
+			}
+		}
+	}
+	#info-sinopse {
+		display: block;
+		float: left;
+	}
+	
+	
+}
+
+#elenco {
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		max-width: 90vw;
+	}
+	.info-nameactor {
+		flex-grow: 0;
+		border: solid 1px #444;
+		background-color: #444;
+		text-align: center;
+		vertical-align: middle;
+		padding: 15px 20px;
+		width: 11vw;
+		&:not(:first-child) {
+			margin-left: 2px;
+		}
+		.inf-actor {
+			display: block;
+			font: {
+				family: "Source Sans Pro Light", "Source Sans Pro", sans-serif;
+				size: 1.2em;
+			}
+		}
+		.inf-carac {
+			display: block;
+			color: #aaa;
+			font: {
+				family: "Roboto", sans-serif;
+				size: 0.9em;
+			}
+		}
+	}
+}

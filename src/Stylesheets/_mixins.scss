@@ -1,0 +1,29 @@
+@mixin backgroundgradient($p1, $p2, $color1, $p3, $color2, $p4) {
+	-webkit-background: radial-gradient(circle farthest-corner at $p1 $p2, $color1 $p3, $color2 $p4);
+	-moz-background: radial-gradient(circle farthest-corner at $p1 $p2, $color1 $p3, $color2 $p4);
+	-ms-background: radial-gradient(circle farthest-corner at $p1 $p2, $color1 $p3, $color2 $p4);
+	-o-background: radial-gradient(circle farthest-corner at $p1 $p2, $color1 $p3, $color2 $p4);
+	background: radial-gradient(circle farthest-corner at $p1 $p2, $color1 $p3, $color2 $p4);
+}
+
+@mixin transit($property, $duration, $style) {
+	-webkit-transition: $property $duration $style;
+	-moz-transition: $property $duration $style;
+	-ms-transition: $property $duration $style;
+	-o-transition: $property $duration $style;
+	transition: $property $duration $style;
+}
+
+@mixin linback($dir, $color1, $color2) {
+	background: $color1;
+	-webkit-background: linear-gradient($dir, $color1 0%, $color2 100%);
+	-moz-background: linear-gradient($dir, $color1 0%, $color2 100%);
+	-ms-background: linear-gradient($dir, $color1 0%, $color2 100%);
+	-o-background: linear-gradient($dir, $color1 0%, $color2 100%);
+	background: linear-gradient($dir, $color1 0%, $color2 100%);
+} 
+
+@mixin thinfont($size, $color) {
+	-webkit-text-stroke: $size $color;
+	text-stroke: $size $color;
+}
